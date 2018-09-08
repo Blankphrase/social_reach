@@ -29,7 +29,7 @@ SECRET_KEY = config('SECRET_KEY')
 DEBUG = config('DEBUG')
 MODE=config("MODE", default="dev")
 
-ALLOWED_HOSTS = [mysocialreach.herokuapp.com]
+ALLOWED_HOSTS = ['mysocialreach.herokuapp.com']
 
 # Application definition
 
