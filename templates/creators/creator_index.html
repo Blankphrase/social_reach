@@ -1,36 +1,33 @@
-{% extends "base.html" %}
+{% extends "user_base.html" %}
 
-{% block content %}
-<div class="row headline">
+{% block main %}
 
-    <div class="col-md-3">
-        <p>{{ user.first_name }} {{ user.last_name }}</p>
-        <p> {{ creator.bio }}</p>
-        <p>Niches:</p>
-        {% for niche in niches %}
+
+    <p>{{ user.first_name }} {{ user.last_name }}</p>
+    <p> {{ creator.bio }}</p>
+    <p>Niches:</p>
+    {% for niche in niches %}
         <span class="">{{ niche.name }}</span>
-        {% endfor %}
-        <p>Demographic: {{ creator.audience_demographic }}</p>
-        <a href="{% url 'profile_edit' pk=request.user.id %}" class="btn btn-outline btn-wide">edit profile</a>
-    </div>
-
-    <div class="col-md-9">
-        <a href="{% url 'platform_create' %}" class="btn btn-fill btn-wide">add social platform</a>
-        {% for platform in platforms %}
+    {% endfor %}
+    <p>Demographic: {{ creator.audience_demographic }}</p>
+    <a href="{% url 'platform_create' %}" class="btn btn-fill btn-wide">add social platform</a>
+    {% for platform in platforms %}
         <div class="card">
             <span>Platform: {{ platform.platform }}</span>
             <a href="{{ platform.url }}">Account name: {{ platform.account_name }}</a>
             <p>Metrics: {{ platform.metrics }}</p>
-            <div class="card-footer">
-                <a href="{% url 'platform_update' pk=platform.id%}" class="btn btn-outline btn-sm">edit this platform</a>
-                <a href="{% url 'platform_delete' pk=platform.id%}" class="btn btn-outline btn-sm">delete this platform</a>
-            </div>
+            <a href="{% url 'platform_update' pk=platform.id %}" class="btn btn-outline btn-sm">
+                <span class="fa fa-pencil"></span>
+            </a>
+            <a href="{% url 'platform_delete' pk=platform.id %}" class="btn btn-outline btn-sm">
+                <span class="fa fa-trash"></span>
+            </a>
         </div>
-
-        {% endfor %}
-    </div>
-
-</div>
+    {% endfor %}
 
 
-{% endblock content %}
+{% endblock main %}
+
+{% block extra_body %}
+    <script class="card-fstar-ratings/js/dist/star-ratings.min.js' %}"></script>
+{% endblock extra_body %}

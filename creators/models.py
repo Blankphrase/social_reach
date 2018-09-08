@@ -14,7 +14,6 @@ class CreatorProfile(models.Model):
     def __str__(self):
         return self.bio
 
-
 class SocialPlatform(models.Model):
     PLATFORMS = (
         ('Facebook', 'Facebook'),

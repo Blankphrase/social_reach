@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 
 {% load bootstrap4 %}
+{% load fontawesome %}
 {% load static %}
+
 
 
 <html>
@@ -14,12 +16,18 @@
 
     <title>{% block head_title %}{% endblock %}</title>
 
+    <!-- FAVICON -->
+    <link rel="shortcut icon" type="image/png" href="{% static 'images/favicon.ico' %}"/>
+
     <!-- STYLESHEETS -->
     {% block styles %}
         {% bootstrap_css %}
+        {% fontawesome_stylesheet %}
         {% bootstrap_javascript jquery='full' %}
+        <link rel="stylesheet" href="{% static 'star-ratings/css/star-ratings.css' %}">
+        <script type="text/javascript" src="{% static 'star-ratings/js/dist/star-ratings.min.js' %}"></script>
         <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
-        <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,800" rel="stylesheet">
     {% endblock styles %}
 
 
@@ -28,55 +36,22 @@
 </head>
 
 <body>
+
+
 {% block body %}
 
-{% bootstrap_messages %}
+    {% bootstrap_messages %}
 
-<nav class="navbar navbar-expand-md navbar-light">
-    <a class="navbar-brand fill-txt" href="/">Social Reach</a>
-
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menuNav" aria-controls="menuNav" aria-expanded="false">
-        <span class="btn btn-fill">&#8801; Menu</span>
-    </button>
-
-    <div class="collapse navbar-collapse" id="menuNav">
-        <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-                <a class="nav-link" href="{% url 'campaigns_list' %}">Campaigns</a>
-            </li>
-            {% if user.is_authenticated %}
-            <li class="nav-item">
-                <a class="nav-link " href="{% url 'account_email' %}">Edit Account</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="{% url 'account_logout' %}">Log Out</a>
-            </li>
-            {% else %}
-            <li class="nav-item">
-                <a class="nav-link" href="{% url 'account_login' %}">Log In</a>
-            </li>
-            {% endif %}
-        </ul>
+    <div class="content-block">
+        {% block content %}
+        {% endblock content%}
     </div>
 
-</nav>
+{% endblock body%}
 
 
-<div class="container-fluid">
-    <div class="content-row row">
-
-    {% block content %}
-    {% endblock content%}
-
-
-    {% endblock body%}
-
-
-    {% block extra_body %}
-    {% endblock %}
-    </div>
-</div>
-
+{% block extra_body %}
+{% endblock %}
 
 
 </body>

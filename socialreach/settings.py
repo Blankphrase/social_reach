@@ -47,11 +47,10 @@ INSTALLED_APPS = [
     'managers',
     'creators',
     'bootstrap4',
+    'fontawesome',
+    'star_ratings',
     'messages',
-    'mpesa_api.core',
-    'mpesa_api.util',
     'rest_framework',
-    'mpesa',
 ]
 
 
