@@ -24,12 +24,12 @@ A web application that that helps brands and social media influencers connect an
 
 #### Technologies used
     - Python 3.6
-    - Django
+    - Django2.0
     - Postgresql
 
 #### Clone the Repo and enter the project folder.
 ```bash
-git clone https://github.com/adiela/social_reach.git && cd social_reach
+git clone https://github.com/blankphrase/social_reach.git && cd social_reach
 ```
 
 #### Create and activate the virtual environment
@@ -75,10 +75,10 @@ Open [localhost:8000](http://127.0.0.1:8000/)
 Please read this [comprehensive guide](https://opensource.guide/how-to-contribute/) on how to contribute. Pull requests are welcome!
 
 ## Bugs
-No known bugs if a bug is found create an issue in the [issues section](https://github.com/adiela/social_manager/issues) of the repository.
+No known bugs if a bug is found create an issue in the [issues section](https://github.com/blankphrase/social_manager/issues) of the repository.
 
 
 ## [LICENSE](LICENSE)
 This project 
 
-Copyright (c)2018 [Adiela Abishua](https://github.com/adiela)
+Copyright (c)2018 [Clifford Kasera](https://github.com/blankphrase)
