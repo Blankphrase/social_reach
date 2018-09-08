@@ -10,4 +10,5 @@ urlpatterns = [
     path('quote/create/<pk>/', views.quote_create, name='quote_create'),
     path('quote/update/<pk>/', views.QuoteUpdateView.as_view(), name='quote_update'),
     path('quote/delete/<pk>/', views.QuoteDeleteView.as_view(), name='quote_delete'),
+    path('pricing/<user>', views.get_data, name='get_data'),
 ]

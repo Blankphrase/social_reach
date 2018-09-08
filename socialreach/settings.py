@@ -48,10 +48,6 @@ INSTALLED_APPS = [
     'creators',
     'bootstrap4',
     'messages',
-    'mpesa_api.core',
-    'mpesa_api.util',
-    'rest_framework',
-    'mpesa',
 ]
 
 

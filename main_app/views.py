@@ -9,7 +9,7 @@ def index(request):
     user = request.user
     if request.user.is_authenticated:
 
-        if user.groups.filter(name='Brand Managers').exists():
+        if user.groups.filter(id=3).exists():
             manager = request.user.brandmanagerprofile
             template = 'managers/manager_index.html'
             brands = manager.brand_set.all()
