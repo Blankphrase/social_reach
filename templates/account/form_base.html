@@ -4,12 +4,15 @@
 
 
 {% block content %}
-  <div class="col-5 form-left">
+    <div class="row">
+        <div class="col-md-2 form-left">
 
-  </div>
-  <div class="col-7 form-col">
-    {% block forms %}
-    {% endblock forms %}
-  </div>
+        </div>
+        <div class="col-md-10 form-col">
+            {% block forms %}
+            {% endblock forms %}
+        </div>
+
+    </div>
 
 {% endblock %}

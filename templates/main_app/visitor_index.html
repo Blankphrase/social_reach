@@ -4,16 +4,155 @@
 
 
 {% block content %}
-<div class="row headline">
 
-    <div class="col-md-6 ">
-        <p class="headline-txt fill-txt">Digital marketing made easy</p>
-        <p class="text-muted"> Create an Account</p>
-        <a class="btn btn-fill btn-wide mb-2" href="{% url 'managers_signup' %}">Brands</a>
-        <a class="btn btn-outline btn-wide mb-2" href="{% url 'creators_signup' %}">Creators</a>
+    <!-- HEADER -->
+    <header>
+
+        <!-- Navigation -->
+        <nav class="navbar navbar-expand-md visitor-nav">
+            <a class="navbar-brand" href="/">Social Manager</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsingNavbar">
+                Menu &#8801;
+            </button>
+
+            <div class="navbar-collapse collapse" id="collapsingNavbar">
+                <div class="navbar-nav ml-auto">
+                    <a href="" class="nav-item nav-link small">About</a>
+                    <a href="" class="nav-item nav-link small">Pricing</a>
+                    <a href="" class="nav-item nav-link small">Testimonials</a>
+                    <a href="{% url 'account_login' %}" class="nav-item nav-link small text-uppercase">Login</a>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Header Text -->
+        <div id="header-text">
+            <h1>Social Manager</h1>
+            <p>Digital Marketing Made Easier </p>
+            <button class="btn btn-outline" data-toggle="modal" data-target="#signupModal">Create Account</button>
+        </div>
+
+    </header>
+
+
+    <!-- DESKTOP PREVIEW -->
+    <section id="main-preview">
+        <img src="http://pngimg.com/uploads/macbook/macbook_PNG47.png" alt="">
+    </section>
+
+
+     <!-- ABOUT SECTION-->
+    <section id="about">
+
+        <div class="section-header">
+            <h1>How it Works</h1>
+            <p>Manage your digital marketing campaigns from one place, and connect with social media content
+                creators.</p>
+        </div>
+
+        <div class="card">
+
+            <div class="row">
+                <div class="col-6">
+
+                    <h5 style="color: #0FB8AD">
+                        <span class="fa-stack fa-2x">
+                            <i class="fa fa-circle fa-stack-2x"></i>
+                            <i class="fa fa-user fa-stack-1x fa-inverse"></i>
+                        </span>
+                        Brand Managers
+                    </h5>
+                    <p>Lorem ipsum dolor sit amet, consectetur</p>
+
+                    <h5 style="color: #1fc8db;">
+                        <span class="fa-stack fa-2x">
+                            <i class="fa fa-circle fa-stack-2x"></i>
+                            <i class="fa fa-flag fa-stack-1x fa-inverse"></i>
+                        </span>
+                        Brands
+                    </h5>
+                    <p>Lorem ipsum dolor sit amet, consectetur</p>
+
+                    <h5 style="color: #FFbB46">
+                        <span class="fa-stack fa-2x">
+                            <i class="fa fa-circle fa-stack-2x"></i>
+                            <i class="fa fa-flag fa-stack-1x fa-inverse"></i>
+                        </span>
+                        Campaigns
+                    </h5>
+                    <p>Lorem ipsum dolor sit amet, consectetur</p>
+
+                </div>
+                <div class="col-6">
+
+                   <h5 style="color: #1fc8db;">
+                        <span class="fa-stack fa-2x">
+                            <i class="fa fa-circle fa-stack-2x"></i>
+                            <i class="fa fa-flag fa-stack-1x fa-inverse"></i>
+                        </span>
+                        Creators</h5>
+                    <p>Lorem ipsum dolor sit amet, consectetur</p>
+
+                    <h5 style="color: #BB69D7">
+                        <span class="fa-stack fa-2x">
+                            <i class="fa fa-circle fa-stack-2x"></i>
+                            <i class="fa fa-flag fa-stack-1x fa-inverse"></i>
+                        </span>
+                        Social Profiles</h5>
+                    <p>Lorem ipsum dolor sit amet, consectetur</p>
+
+                    <h5 style="color: #EF2D56">
+                        <span class="fa-stack fa-2x">
+                            <i class="fa fa-circle fa-stack-2x"></i>
+                            <i class="fa fa-flag fa-stack-1x fa-inverse"></i>
+                        </span>
+                        Quotes</h5>
+                    <p>Lorem ipsum dolor sit amet, consectetur</p>
+
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
+  <!-- SIGNUP MODAL -->
+    <div class="modal fade" id="signupModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+         aria-hidden="true">
+        <div class="modal-block">
+            <div class="modal-header">
+                <h3 class="text-center text-uppercase">Type of Account</h3>
+            </div>
+            <div class="modal-body">
+                <a href="{% url 'creators_signup' %}" class="btn btn-wide btn-fill">Creator</a>
+                <a href="{% url 'managers_signup' %}" class="btn btn-wide btn-fill">Brand Manager</a>
+            </div>
+        </div>
     </div>
-    <div class="col-md-6 head-col">
-        <img src="{% static 'images/networklogos.png' %}">
-    </div>
-</div>
+
+    <!-- FOOTER -->
+    <footer>
+        <nav>
+            <a href="" class="nav-item">FAQ</a>
+            <a href="" class="nav-item">Privacy Policy</a>
+            <a href="" class="nav-item">Terms & Conditions</a>
+        </nav>
+        <hr>
+        <i class="fa fa-facebook"></i>
+        <i class="fa fa-twitter"></i>
+        <i class="fa fa-instagram"></i>
+        <i class="fa fa-linkedin"></i>
+
+    <p> 2018 Social Manager All Rights Reserved </p>
+    </footer>
+
+
+
+    <script src="{% static  'js/jquery-min.js' %}"></script>
+    <script src="{% static 'js/popper.min.js' %}"></script>
+    <script src="{% static 'js/jquery.stellar.min.js' %}"></script>
+    <script src="{% static 'js/wow.js' %}"></script>
+    <script src="{% static 'js/main.js' %}"></script>
+
+
 {% endblock content %}}

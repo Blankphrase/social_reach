@@ -47,6 +47,8 @@ INSTALLED_APPS = [
     'managers',
     'creators',
     'bootstrap4',
+    'fontawesome',
+    'star_ratings',
     'messages',
 ]
 

@@ -1,6 +1,6 @@
-{% extends "list_base.html" %}
+{% extends "user_base.html" %}
 
-{% block list %}
+{% block main %}
 <h1>Campaigns</h1>
 {% for campaign in object_list %}
 <div class="card">
@@ -14,4 +14,4 @@
 {% empty %}
 No Campaigns yet
 {% endfor %}
-{% endblock list %}
+{% endblock main %}
